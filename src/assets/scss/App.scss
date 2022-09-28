@@ -1,0 +1,79 @@
+.contentStyle1 {
+    height: 95vh;
+    color: #fff;
+    line-height: 160px;
+    background-color: #364d79;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0,0,0,0.3));
+    background-image: url("https://www.bmw.com.my/content/dam/bmw/marketMY/bmw_com_my/Home/bmw-i7-desktop.png.asset.1650637146958.png")
+    
+    
+  }
+  .contentStyle2 {
+    height: 95vh;
+    color: #fff;
+    line-height: 160px;
+    background-color: #364d79;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-image: url("https://cdn.pixabay.com/photo/2016/12/07/21/50/car-1890494_960_720.jpg")
+  }
+
+  .main-desc{
+    color:white;
+    padding: 20px;
+    font-size:50px;
+    text-align: left;
+    justify-content: left;
+    font-family:fantasy;
+  }
+  .small-desc{
+    color:white;
+    height: 70px;
+    font-size:25px;
+    justify-content: left;
+    font-family: emoji;
+    padding:20px;
+    margin-top: -160px;
+    //margin-left:0px;
+}
+.go-with {
+  height:20vh;
+  background-color: black;
+  margin: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: fantasy;
+  letter-spacing: 2px;
+  font-size: 30px;
+  text-align:left;
+  margin-left:80px;
+  border-radius:10px;
+  margin-bottom:30px;
+  margin-top:30px;
+  width:90vh;
+}
+.car-details-design{
+    height:50vh;
+    margin: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: fantasy;
+    letter-spacing: 2px;
+    font-size: 30px;
+    text-align:left;
+    margin-left:80px;
+    border-radius:10px;
+    margin-top:100px;
+    width:90vh;
+  }
+  

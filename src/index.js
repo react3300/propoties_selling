@@ -1,17 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import { BrowserRouter } from 'react-router-dom';
+import "antd/dist/antd.min.css";
+import "../src/assets/scss/global.scss";
+import "../src/assets/scss/bootstrap.scss";
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import AppStates from "./utils/AppStates"
+import { Provider } from 'react-redux';
+import { store } from './state/store';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <AppStates>
+  <BrowserRouter>
+  <Provider store={store}>
+      <App />
+      </Provider>
+    </BrowserRouter>,
+    </AppStates>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// Any Condition where DEBUGGING is NEEDED
+var DEBUG = process.env.NODE_ENV === "development";
+if (!DEBUG) {
+  console.log = () => { };
+}
