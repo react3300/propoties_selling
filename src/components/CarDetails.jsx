@@ -54,7 +54,6 @@ const CarDetails = () => {
             carDets?.map((item,index)=>{
             return ( 
             <>
-            <div key={item?.id}>
             <Image src={item?.image} preview={false} />
             {
                 item?.location_wise_price?.map((item2,index2)=>{
@@ -63,7 +62,7 @@ const CarDetails = () => {
                 })
             }
 
-            </div>
+            
             </>
             )
 
