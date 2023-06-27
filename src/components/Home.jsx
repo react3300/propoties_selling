@@ -1,50 +1,37 @@
-import { Carousel,Row,Col } from 'antd';
-import '../assets/scss/App.scss';
-import {Link} from "react-router-dom";
-import {PrimaryButton} from './ButtonControl/ButtonControl'
+import { Carousel } from 'antd'
+import React from 'react'
+import { AUDI_R8 } from '../utils/ImagePath';
 
 const Home = () => {
-  
-  const car1 = () => {
-    console.log("CAR1")
-  }
-  const car2 = () => {
-    console.log("CAR2")
-  }
-  
-  return (
-    <>
-     <Carousel>
-    <div className="contentStyle1">
-      <h1 className='main-desc'>BMW</h1>
-      <h3 className='small-desc'>Know the best price in your city</h3>
-      
-      
-      <PrimaryButton onClick={car1} children='Book A Test Drive Now' />
-      
-    </div>
-    <div className="contentStyle2">
-    <h1 className='main-desc'>AUDI</h1>
-    <h3 className='small-desc'>Know the best price in your city</h3>
-    <PrimaryButton onClick={car2} children='Book A Test Drive Now' />
-    </div>
-    
-  </Carousel>
-  <Row>
-    <Link to="/car-details" className="go-with"><Col xs={2} sm={4} md={6} lg={8} xl={10}>
-      I will go with BMW
-    </Col>
-    </Link>
-    <Col >
-    </Col>
-    <Link className="go-with">
-    <Col  xs={2} sm={4} md={6} lg={8} xl={10}>
-      I will go with AUDI
-    </Col>
-    </Link>
-  </Row>
-    </>
-  )
+
+    const contentStyle = {
+        height: '460px',
+        color: '#fff',
+        lineHeight: '160px',
+        textAlign: 'center',
+        background: '#364d79',
+    };
+
+    return (
+        <Carousel autoplay>
+            <div>  
+                <img
+                    src={AUDI_R8}
+                    alt="AUDI_R8"
+                    className="100%"
+                />
+            </div>
+            <div>
+                <h3 style={contentStyle}>2</h3>
+            </div>
+            <div>
+                <h3 style={contentStyle}>3</h3>
+            </div>
+            <div>
+                <h3 style={contentStyle}>4</h3>
+            </div>
+        </Carousel>
+    )
 }
 
 export default Home

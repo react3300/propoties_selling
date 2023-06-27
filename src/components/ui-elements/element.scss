@@ -1,0 +1,182 @@
+@import '../../assets/scss/helpers/colors.scss';
+@import '../../assets/scss/helpers/borders.scss';
+@import '../../assets/scss/helpers/fonts.scss';
+@import '../../assets/scss/helpers/lengths.scss';
+
+
+@mixin main_btn_effect_2 {
+    background: $mainHoverBackground !important;
+    border: 1px solid $mainHoverBackground !important;
+    color: $defaultBackground !important;
+    border-radius: $buttonBorderRadius !important;
+}
+
+@mixin main_btn_effect_1 {
+    background: $primaryColor !important;
+    border-radius: $buttonBorderRadius !important;
+    color: $defaultBackground !important;
+    border: 1px solid $primaryColor !important;
+    height:$buttonHeight!important;
+}
+
+@mixin secondary_btn_effect_2 {
+    background: $defaultBackground !important;
+    border: 1px solid $primaryColor !important;
+    color: $primaryColor !important;
+    border-radius: $buttonBorderRadius !important;
+}
+
+@mixin secondary_btn_effect_1 {
+    background: $secondaryBackground !important;
+    border-radius: $buttonBorderRadius !important;
+    color: $primaryColor !important;
+    border: 1px solid $primaryColor !important;
+}
+
+@mixin secondary_btn_effect_1 {
+    background: $secondaryBackground !important;
+    border-radius: $buttonBorderRadius !important;
+    color: $primaryColor !important;
+    border: 1px solid $primaryColor !important;
+}
+
+@mixin cancel-btn-effect {
+    background: $cancelBtnColor !important;
+    border-radius: $buttonBorderRadius !important;
+    color: $primaryColor !important;
+    // border: 1px solid $primaryColor !important;
+}
+
+.btn_size {
+    padding: 5px 15px;
+    height:$buttonHeight!important;
+    font-size: 16px !important;
+}
+
+.main-btn {
+    @extend .btn_size;
+    @include main_btn_effect_1;
+
+    &:hover {
+        @include main_btn_effect_2;
+    }
+
+    // &:focus {
+    //     @include main_btn_effect_2;
+    // }
+}
+
+.secondary-button {
+    @extend .btn_size;
+    @include secondary_btn_effect_2;
+
+    &:hover {
+        @include secondary_btn_effect_1;
+    }
+
+    &:focus {
+        @include secondary_btn_effect_1;
+    }
+}
+
+.link-btn {
+    color: $primaryColor !important;
+
+    &:hover {
+        color: $mainHoverBackground !important;
+    }
+
+    &:focus {
+        color: $mainHoverBackground !important;
+
+    }
+}
+
+.cancel-btn {
+    padding: 5px 15px;
+    height:$buttonHeight !important;
+    font-size: 16px !important;
+    border: 0;
+    @include cancel-btn-effect;
+
+    &:hover {
+        @include cancel-btn-effect;
+    }
+
+    &:focus {
+        @include cancel-btn-effect;
+    }
+}
+
+.commontext {
+    // color: $commonText !important;
+    font-family: $font1;
+    position: relative !important;
+}
+
+// text-scss
+.heading_text_1 {
+    @extend .commontext;
+    font-weight: 600;
+    font-size: 28px;
+    color: $white;
+    margin-left: 24px;
+    line-height: 1;
+    margin-bottom: 8px;
+
+}
+.heading_text_2 {
+    @extend .commontext;
+    font-weight: 400;
+    font-size: 24px;
+    color: $primaryColor;
+}
+.heading_text_login{
+    @extend .commontext;
+    font-weight: 600;
+    font-size: 32px;
+    color:$heading2Color;
+}
+.heading_text_3{
+    @extend .commontext;
+    font-size: 18px;
+    font-weight: 600;
+}
+.normal_text {
+    font-size: 16px;
+    color: $normalText;
+    font-family: $font2;
+    position: relative !important;
+    font-family: $font2;
+}
+
+.small_text {
+    font-size: 14px;
+    color: $normalText !important;
+    position: relative !important;
+    font-family: $font2;
+}
+
+.span_text {
+    position: relative !important;
+    font-size: 12px;
+    color: $normalText !important;
+    font-family: $font2;
+}
+.ant-btn.ant-btn-sm{
+    height: 40px !important;
+    span{
+        font-size: 14px !important;
+    }
+}
+
+
+@media (max-width: 465px) {
+    .heading_text_1{
+        font-size: 1.325rem;
+        font-weight: 500;
+    }
+    .heading_text_2 {
+        font-size: 18px;
+    }
+}

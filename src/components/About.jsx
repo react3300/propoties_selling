@@ -1,9 +1,10 @@
 import React from 'react'
+import { MainButton } from './ui-elements/Button'
 
 const About = () => {
   return (
-    <div>
-      About
+    <div className='container'>
+      <MainButton className="w-100">About</MainButton>
     </div>
   )
 }

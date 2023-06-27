@@ -7,17 +7,15 @@ import "../src/assets/scss/bootstrap.scss";
 import App from './App';
 import AppStates from "./utils/AppStates"
 import { Provider } from 'react-redux';
-import { store } from './state/store';
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <AppStates>
-  <BrowserRouter>
-  <Provider store={store}>
+    <BrowserRouter>
       <App />
-      </Provider>
     </BrowserRouter>,
-    </AppStates>
+  </AppStates>
 );
 
 // Any Condition where DEBUGGING is NEEDED

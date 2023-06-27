@@ -1,51 +1,27 @@
-import React, { Suspense,useEffect } from 'react';
-import { Route,Routes as ReactRouters,useNavigate } from 'react-router-dom';  // if switch and Link is not defined then  import { Route,Routes,NavLink } from 'react-router-dom';
-//import Loader from '../components/utilities/Loader';
-//import { getAllNotifications, getUserData, updateNotifications } from '../allComponentsExport';
+import React, { Suspense, useEffect } from 'react';
+import AuthLayout from "../layout/AuthLayout";
+import { Navigate, Route, Routes } from "react-router-dom";
 import Home from "../components/Home"
 import About from "../components/About"
-import CarDetails from "../components/CarDetails"
+import Contact from '../components/Contact';
+import Propoties from '../components/Propoties';
 
-const Routes = () => {
-    let navigate = useNavigate();
-    // useEffect(()=>{
-    //     console.log("Route",Routes)
-    //     {navigate("/")}
-    // },[navigate])
-    return (
-        <Suspense >
-        {
-            <ReactRouters>
-                    <Route 
-                    path="/" 
-                    exact 
-                    name="Home" 
-                    element={<Home/>} 
-                    />  
-                    <Route
-                    path="/about" 
-                    exact 
-                    name="About" 
-                    element={<About/>} 
-                    />
-                    <Route
-                    path="/car-details" 
-                    exact 
-                    name="CarDetails" 
-                    element={<CarDetails/>} 
-                    />
-                    <Route 
-                    path="*" 
-                    exact 
-                    name="Home"
-                    element={<Home/>} 
-                    />
-                    
-            </ReactRouters>
-    }
-    </Suspense>
-    
-        );
+
+export const PublicRoutes = () => {
+  return (
+    <>
+     <Suspense>
+      <Routes>
+        <Route element={<AuthLayout />}>
+          <Route path="/home" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/propoties" element={<Propoties />} />
+
+          <Route path="*" element={<Navigate to="/home" replace />} />
+        </Route>
+      </Routes>
+      </Suspense>
+    </>
+  );
 };
-
-export default Routes;
