@@ -9,14 +9,11 @@ const AuthLayout = (props) => {
     return (
         <>
             <Layout>
-                <Header>Header</Header>
-                {/* <Layout> */}
+                <Header />
                 <Content footerStyle>
                     <Outlet>{props}</Outlet>
                 </Content>
-                {/* </Layout> */}
             </Layout>
-            {/* <Footer style={footerStyle}>Footer</Footer> */}
         </>
     );
 };
