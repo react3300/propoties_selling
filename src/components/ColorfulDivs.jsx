@@ -8,6 +8,7 @@ const ColorfulDivs = () => {
     setActiveDiv(divIndex);
   };
 
+  
   return (
     <div>
       <div
